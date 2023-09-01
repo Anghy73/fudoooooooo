@@ -12,17 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value;
 
         if (users[username] === password) {
-            message.textContent = "Inicio de sesión exitoso!";
-            message.style.color = "white";
-            message.classList.remove("hidden");
             window.location.href = "principal.html";
         } else {
-          message.textContent = "Credenciales incorrectas. Inténtalo de nuevo.";
-          message.style.color = "red";
-          message.classList.remove("hidden");
-          usernameInput.value = "";
-          passwordInput.value = ""; 
-      }
+            message.textContent = "Inténtalo de nuevo.";
+            message.style.color = "white";
+            message.classList.remove("hidden");
+            usernameInput.value = "";
+            passwordInputa.value = "";
         }
     });
 
