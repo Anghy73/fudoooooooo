@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "principal.html";
         } else {
             message.textContent = "Credenciales incorrectas. Inténtalo de nuevo.";
-            message.style.color = "red";
+            message.style.color = "black";
             message.classList.remove("hidden");
         }
     });
