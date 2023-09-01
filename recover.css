@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+.login-container {
+    text-align: center;
+    background-color: #ff0000;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: white;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 25px; /* Redondea las esquinas */
+}
+
+label {
+    color: white;
+}
+
+button {
+    background-color: white;
+    color: red;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    color: black;
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+}
+
+a:hover {
+    color: black;
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
