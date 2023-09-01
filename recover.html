@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recuperar Contraseña</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Recuperar Contraseña</h2>
+        <form id="recovery-form" method="POST" action="recover.php">
+          <div class="input-container">
+              <label for="username">Usuario:</label>
+              <input type="text" id="username" name="username" required>
+          </div>
+            <div class="input-container1">
+                <label for="email">Correo:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <button type="submit">Recuperar Contraseña</button>
+        </form>
+        <p id="message" class="hidden"></p>
+        <a href="login.html">Volver al inicio de sesión</a>
+    </div>
+</body>
+</html>
