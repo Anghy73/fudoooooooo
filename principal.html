@@ -1,51 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedido de Comida</title>
     <link rel="stylesheet" href="principal.css">
 </head>
+
 <body>
     <nav>
         <h1>Pedido de Comida</h1>
     </nav>
-
     <main>
-        <div id="tables-container">
+        <div id="tables-container" class="tables">
             <h2>Mesas</h2>
-            <div class="table" data-table-id="1">
-                <span class="table-number">1</span>
-                <br></br>
-                <button class="open-table-button">+</button>
+            <div>
+                <div class="table" data-table-id="1">
+                    <span class="table-number">1</span>
+                    <br></br>
+                    <button class="open-table-button">+</button>
+                </div>
+                <div class="table" data-table-id="2">
+                    <span class="table-number">2</span>
+                    <br></br>
+                    <button class="open-table-button">+</button>
+                </div>
+                <div class="table" data-table-id="3">
+                    <span class="table-number">3</span>
+                    <br></br>
+                    <button class="open-table-button">+</button>
+                </div>
             </div>
-            <div class="table" data-table-id="2">
-                <span class="table-number">2</span>
-                <br></br>
-                <button class="open-table-button">+</button>
+        </div>
+        <div id="form-container">
+            <p class="form-container-p">Seleccione una mesa</p>
+            <div class="open-table-form">
+                <h3>Abrir Mesa <span id="id-table"></span></h3>
+                <form>
+                    <div class="form-group">
+                        <label for="garzon">Garzón:</label>
+                        <input type="text" id="garzon" name="garzon" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="num-personas">Número de Personas:</label>
+                        <input type="number" id="num-personas" min="1" max="6" name="num-personas" required>
+                    </div>
+                    <div class="form-group-submit">
+                        <button type="submit">Abrir Mesa</button>
+                    </div>
+                </form>
             </div>
+            <div class="template__container"></div>
         </div>
     </main>
-
-    <div id="form-container" class="hidden">
-        <div class="open-table-form">
-            <h3>Abrir Mesa</h3>
-            <form>
-                <div class="form-group">
-                    <label for="garzon">Garzón:</label>
-                    <input type="text" id="garzon" name="garzon" required>
+    <template id="templateCreatedOrder">
+        <div class="order__template">
+            <div class="order__info">
+                <p id="orderInfo">yes</p>
+            </div>
+            <div class="order__add">
+                <h3>Adicionar</h3>
+                <form class="form__order">
+                    <input type="text" placeholder="Buscar Producto...">
+                    <button>+</button>
+                </form>
+            </div>
+            <div class="list">
+                <div class="list__products">
+                    <div class="list__product">
+                        <div>
+                            <span>1</span>
+                            <p><b>Mojito Cubano</b></p>
+                        </div>
+                        <div>
+                            <p>$9.000</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="num-personas">Número de Personas:</label>
-                    <input type="number" id="num-personas" name="num-personas" required>
+                <div class="list__total">
+                    <p>Total: </p>
+                    <p><b>$9.000</b></p>
                 </div>
-                <div class="form-group">
-                    <button type="submit">Abrir Mesa</button>
-                </div>
-            </form>
+            </div>
+            <button id="orderTerminar" class="order__terminar">Terminar</button>
         </div>
-    </div>
-
+    </template>
     <script src="principal.js"></script>
 </body>
+
 </html>
