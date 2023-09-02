@@ -1,92 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedido de Comida</title>
     <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
 <body>
-    <nav>
-        <h1>Pedido de Comida</h1>
-    </nav>
-    <main>
-        <div id="tables-container" class="tables">
-            <h2>Mesas</h2>
+  <nav>
+    <div class="navbar">
+      <div class="navbar-icon">
+        <i class="fas fa-utensils"></i>
+      </div>
+      <div class="navbar-date">
+        <span id="date"></span>
+      </div>
+      <div class="navbar-time">
+        <span id="time"></span>
+      </div>
+      <div class="navbar-profile">
+        <i class="fas fa-user"></i>
+        <span>Nombre de Usuario</span>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="area-button active" data-area="salon">Salón</button>
+      <button class="area-button" data-area="terraza">Terraza</button>
+      <button class="area-button" data-area="patio">Patio</button>
+    </div>
+  </nav>
+  <main>
+    <div id="tables-container" class="tables">
+      <h2>Mesas</h2>
+      <div>
+        <div class="table" data-table-id="1" data-area="salon">
+          <span class="table-number">1</span>
+          <br></br>
+          <button class="open-table-button">+</button>
+        </div>
+        <div class="table" data-table-id="2" data-area="terraza">
+          <span class="table-number">2</span>
+          <br></br>
+          <button class="open-table-button">+</button>
+        </div>
+        <div class="table" data-table-id="3" data-area="patio">
+          <span class="table-number">3</span>
+          <br></br>
+          <button class="open-table-button">+</button>
+        </div>
+        <div class="table" data-table-id="4" data-area="terraza">
+          <span class="table-number">4</span>
+          <br></br>
+          <button class="open-table-button">+</button>
+        </div>
+        <div class="table" data-table-id="5" data-area="terraza">
+          <span class="table-number">5</span>
+          <br></br>
+          <button class="open-table-button">+</button>
+        </div>
+        <div class="table" data-table-id="6" data-area="patio">
+          <span class="table-number">6</span>
+          <br></br>
+          <button class="open-table-button">+</button>
+        </div>
+        <div class="table" data-table-id="7" data-area="patio">
+          <span class="table-number">7</span>
+          <br></br>
+          <button class="open-table-button">+</button>
+        </div>
+      </div>
+    </div>
+    <div id="form-container">
+      <p class="form-container-p">Seleccione una mesa</p>
+      <div class="open-table-form">
+        <h3>Abrir Mesa <span id="id-table"></span></h3>
+        <form>
+          <div class="form-group">
+            <label for="garzon">Garzón:</label>
+            <input type="text" id="garzon" name="garzon" required>
+          </div>
+          <div class="form-group">
+            <label for="num-personas">Número de Personas:</label>
+            <input type="number" id="num-personas" min="1" max="6" name="num-personas" required>
+          </div>
+          <div class="form-group-submit">
+            <button type="submit">Abrir Mesa</button>
+          </div>
+        </form>
+      </div>
+      <div class="template__container"></div>
+    </div>
+  </main>
+  <template id="templateCreatedOrder">
+    <div class="order__template">
+      <div class="order__info">
+        <p id="orderInfo">yes</p>
+      </div>
+      <div class="order__add">
+        <h3>Adicionar</h3>
+        <form class="form__order">
+          <input type="text" placeholder="Buscar Producto...">
+          <button>+</button>
+        </form>
+      </div>
+      <div class="list">
+        <div class="list__products">
+          <div class="list__product">
             <div>
-                <div class="table" data-table-id="1">
-                    <span class="table-number">1</span>
-                    <br></br>
-                    <button class="open-table-button">+</button>
-                </div>
-                <div class="table" data-table-id="2">
-                    <span class="table-number">2</span>
-                    <br></br>
-                    <button class="open-table-button">+</button>
-                </div>
-                <div class="table" data-table-id="3">
-                    <span class="table-number">3</span>
-                    <br></br>
-                    <button class="open-table-button">+</button>
-                </div>
+              <span>1</span>
+              <p><b>Mojito Cubano</b></p>
             </div>
+            <div>
+              <p>$9.000</p>
+            </div>
+          </div>
         </div>
-        <div id="form-container">
-            <p class="form-container-p">Seleccione una mesa</p>
-            <div class="open-table-form">
-                <h3>Abrir Mesa <span id="id-table"></span></h3>
-                <form>
-                    <div class="form-group">
-                        <label for="garzon">Garzón:</label>
-                        <input type="text" id="garzon" name="garzon" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="num-personas">Número de Personas:</label>
-                        <input type="number" id="num-personas" min="1" max="6" name="num-personas" required>
-                    </div>
-                    <div class="form-group-submit">
-                        <button type="submit">Abrir Mesa</button>
-                    </div>
-                </form>
-            </div>
-            <div class="template__container"></div>
+        <div class="list__total">
+          <p>Total: </p>
+          <p><b>$9.000</b></p>
         </div>
-    </main>
-    <template id="templateCreatedOrder">
-        <div class="order__template">
-            <div class="order__info">
-                <p id="orderInfo">yes</p>
-            </div>
-            <div class="order__add">
-                <h3>Adicionar</h3>
-                <form class="form__order">
-                    <input type="text" placeholder="Buscar Producto...">
-                    <button>+</button>
-                </form>
-            </div>
-            <div class="list">
-                <div class="list__products">
-                    <div class="list__product">
-                        <div>
-                            <span>1</span>
-                            <p><b>Mojito Cubano</b></p>
-                        </div>
-                        <div>
-                            <p>$9.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="list__total">
-                    <p>Total: </p>
-                    <p><b>$9.000</b></p>
-                </div>
-            </div>
-            <button id="orderTerminar" class="order__terminar">Terminar</button>
-        </div>
-    </template>
-    <script src="principal.js"></script>
+      </div>
+      <button id="orderTerminar" class="order__terminar">Terminar</button>
+    </div>
+  </template>
+  <script src="principal.js"></script>
 </body>
-
 </html>

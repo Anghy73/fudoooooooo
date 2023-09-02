@@ -17,10 +17,10 @@ body {
 }
 
 nav {
-    background-color: red;
-    color: white;
+    background-color: black;
+    color: black;
     text-align: center;
-    padding: 1.5rem 0 ;
+    padding: 0.1rem 0 ;
 }
 
 main {
@@ -63,7 +63,6 @@ textarea {
 #form-container {
     width: 100%;
     height: 100%;
-    /* background-color: #f9f9f9; */
     background-color: rgba(37, 148, 37, 0.356);
     padding: 1rem;
     border: 1px solid #ddd;
@@ -158,11 +157,6 @@ textarea {
     display: none;
 }
 
-
-
-
-/* TEMPLATE */
-
 .template__container {
     width: 100%;
 }
@@ -251,4 +245,63 @@ textarea {
     #tables-container {
         margin-bottom: 4rem;
     }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    background-color: black;
+    color: white;
+}
+
+.navbar-icon {
+    font-size: 24px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.navbar-date,
+.navbar-time {
+    font-size: 15px;
+}
+
+.navbar-time {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.navbar-profile i {
+    margin-right: 0.5rem;
+}
+
+.subnav {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 719px;
+  background-color: black;
+  padding: 0.2rem;
+}
+
+.area-button {
+  width: 45px;
+  height: 45px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
 }
