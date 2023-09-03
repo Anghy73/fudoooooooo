@@ -283,25 +283,21 @@ textarea {
 }
 
 .subnav {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: auto;
-  left: 0;
-  right: 719px;
-  background-color: black;
-  padding: 0.2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: black;
+    padding: 0.2rem;
 }
 
 .area-button {
-  width: 45px;
-  height: 45px;
-  margin-right: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  background-color: black;
-  color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
 }
