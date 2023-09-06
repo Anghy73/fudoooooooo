@@ -141,3 +141,12 @@ function updateDateTime() {
 setInterval(updateDateTime, 1000);
 
 updateDateTime();
+
+
+
+// menu-burger
+
+const navContent = document.querySelector('.navbar-content')
+const menu = document.querySelector('.navbar-menu').addEventListener('click', () => {
+    navContent.classList.toggle('menu-active')
+})
